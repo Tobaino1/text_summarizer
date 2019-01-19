@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -31,11 +36,53 @@ class HomeController extends Controller
     /**
      * Call external API and return summarized text
      *
-     * @return null
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function summarize()
+    public function summarize(Request $request)
     {
+        // get sentence from request
+        $paragraph = $request->input('paragraph');
+        $request->session()->flash('paragraph', $paragraph);
+
+        // setup external API client
+        $client = new Client([
+            'base_uri' => 'https://api.spinbot.com',
+            'timeout'  => 2.0,
+            'headers'  => [
+                'x-auth-key' => config('services.spinbot.key')
+            ]
+        ]);
+
         // call API here...
-        return;
+        try {
+            $response = $client->request('GET', '', ['body' => $paragraph]);
+
+            // get response
+            $balance = $response->getHeader('available-spins');
+            $body = $response->getBody();
+
+            // flash response
+            $request->session()->flash('response', (string) $body);
+            $request->session()->flash('balance', $balance[0]);
+
+        } catch (ClientException $e) {
+            $error = Psr7\str($e->getResponse());
+
+            // flash client error
+            $request->session()->flash('error', $error);
+        } catch (RequestException $e) {
+            $error = 'Network Error Occurred';
+            if ($e->hasResponse()) {
+                $error = Psr7\str($e->getResponse());
+            }
+
+            // flash network error
+            $request->session()->flash('error', $error);
+        }
+
+        return back();
     }
 }
