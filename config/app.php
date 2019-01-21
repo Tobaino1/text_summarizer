@@ -174,14 +174,19 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\TelescopeServiceProvider::class,
+
+
+//        App\Providers\TelescopeServiceProvider::class,
+//
+//        GeneaLabs\LaravelCaffeine\LaravelCaffeineServiceProvider
+//
 
     ],
 
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
-    |--------------------------------------------------------------------------
+    |----------                                        ---------------------------
     |
     | This array of class aliases will be registered when this application
     | is started. However, feel free to register as many as you wish as
