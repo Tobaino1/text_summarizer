@@ -103,9 +103,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">About the Software</a>
                     <a href="https://laracasts.com">user's Guide </a>
                     <a href="https://laravel-news.com">Feedback / Contact us</a>
+                    <a href="{{ route('about') }}">About the Software</a>
+
                     {{--<a href="https://blog.laravel.com">Blog</a>--}}
                     {{--<a href="https://nova.laravel.com">Nova</a>--}}
                     {{--<a href="https://forge.laravel.com">Forge</a>--}}
