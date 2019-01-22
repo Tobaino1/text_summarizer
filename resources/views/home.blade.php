@@ -78,15 +78,6 @@
                             <p>Credit Balance: {{ session('balance') }}</p>
                         @endif
                     </div>
-
-
-                    <br><br><br> <br><br><br>
-
-                    {{--<br><br><br>--}}
-
-                    <div>
-                        <p align="center">All right reserved Computer Science, Lagos State University 2019 </p>
-                    </div>
                 </div>
             </div>
         </div>
