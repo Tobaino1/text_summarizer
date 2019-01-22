@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/summarize', 'HomeController@summarize')->name('summarize');
+
+
+Route::get('/about', '@about')->name('about');
