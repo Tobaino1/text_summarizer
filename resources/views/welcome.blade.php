@@ -96,9 +96,9 @@
         </div>
 
         <div class="links">
-            <a href="https://laravel.com/docs">About the Software</a>
-            <a href="https://laracasts.com">user's Guide </a>
-            <a href="https://laravel-news.com">Feedback / Contact us</a>
+            <a href="#">About the Software</a>
+            <a href="#">user's Guide </a>
+            <a href="#">Feedback / Contact us</a>
         </div>
     </div>
 </div>
