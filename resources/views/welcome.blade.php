@@ -65,7 +65,15 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+
+    <div class="top-left links">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="img/img.png" class="css-class" alt="logo">
+
+        </a>
+    </div>
+
+    <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -80,19 +88,28 @@
                 </div>
             @endif
 
+
+
+
+
+
+
+
+        {{--<img src="resources/img/children.JPEG" alt="LOGO" title="" ALIGN="center" />--}}
+
             <div class="content">
                 <div class="title m-b-md">
                     TEXT SUMMARIZER FOR CHILDREN NEWS RENDERING
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">About the Software</a>
+                    <a href="https://laracasts.com">user's Guide </a>
+                    <a href="https://laravel-news.com">Feedback / Contact us</a>
+                    {{--<a href="https://blog.laravel.com">Blog</a>--}}
+                    {{--<a href="https://nova.laravel.com">Nova</a>--}}
+                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
+                    {{--<a href="https://github.com/laravel/laravel">GitHub</a>--}}
                 </div>
             </div>
         </div>
