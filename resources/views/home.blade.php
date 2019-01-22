@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Carry out a Text Summary</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -22,7 +22,9 @@
 
                                 <div class="col-md-8">
                                     <textarea id="paragraph" type="textarea" class="form-control{{ $errors->has('paragraph') ? ' is-invalid' : '' }}" name="paragraph"
-                                              rows="7" placeholder="Enter text paragraph to summarize" required>
+                                              rows="7"
+                                              placeholder="Enter text paragraph / copy & paste from a source in order to summarize"
+                                              required>
                                     </textarea>
 
                                     @if ($errors->has('paragraph'))
@@ -76,8 +78,18 @@
                             <p>Credit Balance: {{ session('balance') }}</p>
                         @endif
                     </div>
+
+
+                    <br><br><br> <br><br><br>
+
+                    {{--<br><br><br>--}}
+
+                    <div>
+                        <p align="center">All right reserved Computer Science, Lagos State University 2019 </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+
