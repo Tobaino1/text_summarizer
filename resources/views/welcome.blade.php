@@ -97,10 +97,12 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">About the Software</a>
-                    <a href="https://laravel-news.com">Feedback / Contact us</a>
+                    {{--<a href="https://laravel.com/docs">About the Software</a>--}}
+                    {{--<a href="https://laravel-news.com">Feedback / Contact us</a>--}}
 
                     <a href="{{ route('about') }}">About & User's guide </a>
+                    <a href="{{ route('feedback_contact') }}"> Feedback / Contact us </a>
+
 
                     {{--<a href="https://blog.laravel.com">Blog</a>--}}
                     {{--<a href="https://nova.laravel.com">Nova</a>--}}

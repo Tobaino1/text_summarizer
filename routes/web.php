@@ -26,3 +26,7 @@ Route::post('/summarize', 'HomeController@summarize')->name('summarize');
 
 
 Route::view('about', 'about')->name('about');
+
+
+Route::view('feedback_contact', 'feedback_contact')->name('feedback_contact');
+
