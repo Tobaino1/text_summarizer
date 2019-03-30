@@ -66,12 +66,12 @@
     </head>
     <body>
 
-    <div class="top-left links">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="img/img.png" class="css-class" alt="logo">
+    {{--<div class="top-left links">--}}
+    {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
+    {{--<img src="img/img.png" class="css-class" alt="logo">--}}
 
-        </a>
-    </div>
+    {{--</a>--}}
+    {{--</div>--}}
 
     <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
