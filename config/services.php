@@ -42,6 +42,10 @@ return [
 
     'spinbot' => [
         'key' => env('SPINBOT_API')
+    ],
+
+    'textrazor' => [
+        'key' => env('TEXTRAZOR_API')
     ]
 
 ];

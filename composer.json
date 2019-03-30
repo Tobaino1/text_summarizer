@@ -12,8 +12,9 @@
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "5.7.*",
+        "laravel/telescope": "^1.0",
         "laravel/tinker": "^1.0",
-        "laravel/telescope": "^1.0"
+        "textrazor/textrazor-php": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
