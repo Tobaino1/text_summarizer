@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        <form method="POST" class="mb-4" action="{{ route('summarize') }}">
+                        <form method="POST" class="mb-4" action="{{ route('summarize_two') }}">
                             @csrf
 
                             <div class="form-group row">
