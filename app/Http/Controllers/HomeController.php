@@ -8,6 +8,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
 use Illuminate\Http\Request;
 use TextRazor;
+use TextRazorSettings;
 
 class HomeController extends Controller
 {
@@ -94,40 +95,23 @@ class HomeController extends Controller
         $request->session()->flash('paragraph', $paragraph);
 
         // setup external API client
-        $client = new Client([
-            'base_uri' => 'https://api.textrazor.com',
-            'timeout' => 2.0,
-            'headers' => [
-                'x-auth-key' => config('services.textrazor.key')
-            ]
-        ]);
+	    TextRazorSettings::setApiKey(config('services.textrazor.key'));
 
-        // call API here...
-        try {
-            $response = $client->request('GET', '', ['body' => $paragraph]);
+	    $textrazor = new TextRazor();
 
-            // get response
-            $balance = $response->getHeader('available-spins');
-            $body = $response->getBody();
+	    $textrazor->addExtractor('entities');
 
-            // flash response
-            $request->session()->flash('response', (string)$body);
-            $request->session()->flash('balance', $balance[0]);
+	    $response = $textrazor->analyze($paragraph);
 
-        } catch (ClientException $e) {
-            $error = Psr7\str($e->getResponse());
+	    $body = '';
 
-            // flash client error
-            $request->session()->flash('error', $error);
-        } catch (RequestException $e) {
-            $error = 'Network Error Occurred';
-            if ($e->hasResponse()) {
-                $error = Psr7\str($e->getResponse());
-            }
+	    if (isset($response['response']['entities'])) {
+		    foreach ($response['response']['entities'] as $entity) {
+			    $body = $body . PHP_EOL . $entity['entityId'];
+		    }
+	    }
 
-            // flash network error
-            $request->session()->flash('error', $error);
-        }
+	    $request->session()->flash('response', (string)$body);
 
         return back();
     }
