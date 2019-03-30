@@ -24,6 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/summarize', 'HomeController@summarize')->name('summarize');
 
+Route::post('/summarize_two', 'HomeController@summarize_two')->name('summarize_two');
+
 
 Route::view('about', 'about')->name('about');
 
