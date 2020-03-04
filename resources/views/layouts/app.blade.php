@@ -16,6 +16,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
+    <!-- adding bootstrap theme and jquery from bootswatch -->
+    <link rel="stylesheet" type="text/css" href="{{url('css/bootstrap.css')}}">
+    <script type="text/javascript" src="{{url('js/jquery-3.1.0.js')}}"></script>
+     <script type="text/javascript" src="{{url('js/jquery-3.1.0.js')}}"></script>
+
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -81,15 +87,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer font-small blue">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <p align="center">All right reserved Computer Science, Lagos State University 2019 </p>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
+   @include ('inc.footer')
     <!-- Footer -->
 </div>
 </body>
