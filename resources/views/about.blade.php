@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header"><h1> {{ __('About the system') }}</h1></div>
+                    <div class="card-header"><h1 style="color: green"> {{ __('About the system') }}</h1></div>
 
                     <div class="card-body">
                         <p align="justify">The Text Summarizer is a web based application that simplifies a text
@@ -23,7 +23,7 @@
                         <p align="justify"> The Text Summarizer focuses on the text, the summary, and the user. It's an
                             important tool for text summary because it processes request very fast .</p>
                         <bR>
-                        <h1 align="left"> How to use the System</h1>
+                        <h1 align="left" style="color: green"> How to use the System</h1>
                         <p align="justify">Click on Register on the horizontal menu link to register with your
                             details </p>
                         <p align="justify">Copy and Paste your Texts form Pdf, word document, web page portal</p>
@@ -34,4 +34,7 @@
             </div>
         </div>
     </div>
+
+<br><br><br><br><br><br>
+
 @endsection
