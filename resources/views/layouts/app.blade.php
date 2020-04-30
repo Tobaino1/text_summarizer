@@ -16,42 +16,35 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-    <!-- adding bootstrap theme and jquery from bootswatch -->
-    <link rel="stylesheet" type="text/css" href="{{url('css/bootstrap.css')}}">
-    <script type="text/javascript" src="{{url('js/jquery-3.1.0.js')}}"></script>
-     <script type="text/javascript" src="{{url('js/jquery-3.1.0.js')}}"></script>
-
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+   <!--  <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <div class="container"> -->
+            <!-- <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
+          <!--   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                Left Side Of Navbar
                 <ul class="navbar-nav mr-auto">
 
-                </ul>
+                </ul> -->
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
+<!--                 <ul class="navbar-nav ml-auto">
+ -->                    <!-- Authentication Links -->
+                   <!--  @guest
+                        <li class="nav-item">-
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
+                        </li> -->
+                     <!--    @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
@@ -76,12 +69,43 @@
                                 </form>
                             </div>
                         </li>
-                    @endguest
-                </ul>
-            </div>
+                    @endguest -->
+                <!-- </ul> -->
+            
+           
+           <!--  </div>
         </div>
-    </nav>
+    </nav> -->
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">A Technique for Children news rendering by Text Summarization</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-link">     
+         <a class="nav-link" href="{{ url('/home') }}" style="color: white">Home</a>
+      </li>
+      <li>
+
+      <li class="nav-link">
+         <a class="nav-link" href="{{ route('login') }}" style="color: white">Login</a>
+      </li>
+      
+      <li class="nav-link">
+         <a class="nav-link" href="{{ route('register') }}" style="color: white">Register</a> 
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
     <main class="py-4">
         @yield('content')
     </main>
