@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Home | Text summarizer for children news rendering</title>
+        <title> Welcome | Text summarizer for children news rendering</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -61,7 +61,7 @@
     <ul class="navbar-nav mr-auto">
       
       <li class="nav-link">     
-                        <a class="navbar-nav" href="{{ url('/home') }}">Home</a>
+                        <a class="nav-link" href="{{ url('/') }}" style="color: white">Welcome</a>
       </li>
       <li>
 
@@ -89,6 +89,7 @@
        <br><br><br><br><br><br><br><br><br><br><br>
        <div class="content">
                 <div class="title m-b-md">
+               <div align="center"> <img src="{{ 'storage/img.png'}}" height="80" width="180" /> </div>
                    <h1 align="center" style="color: green">TEXT SUMMARIZER FOR CHILDREN NEWS RENDERING</h1> 
                 </div>
 
@@ -98,13 +99,16 @@
                   <a href="{{ route('about') }}">About </a> 
                   <hr/>
                  <a href="{{ route('feedback_contact') }}"> Feedback / Contact us </a> 
+                    <hr /style="color: blue">
+                    <a href="https://www.sparklegrid.tech"> Hire Software Engineer(s) / Research & Development Engineer(s)</a> 
                     <hr/>
                     <ul>                  
                 </div>
 
-                <!-- <img src="img/img.PNG" alt="logo"> -->
+                
+
 </div>
-       <br><br><br><br><br><br><br><br>
+       <br><br><br>
 
     <!-- Footer -->
     @include ('inc.footer')
