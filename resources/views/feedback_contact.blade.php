@@ -21,12 +21,12 @@
                             <marquee> For Further Enquiries about the research / system, you can reach out via:
                             </marquee>
                         </p>
-                        <p align="justify"> Oyekan.oluwatobi.adebayo@gmail.com </p>
-                        <p> Toyinenikuomehin@gmail.com </p>
-                        <bR>
+                        <p align="justify"> Oyekan.oluwatobi.adebayo@gmail.com 
+                        <br> Toyinenikuomehin@gmail.com </p>
+                       
                         {{--<h1 align="left"> How to use the System</h1>--}}
-                        <p align="justify"> @Tobainocycle </p>
-                        <p align="justify">@Enikuommehin</p>
+                        <p align="justify"><a href="https://twitter.com/@tobainocycle"> @Tobainocycle </a> <br>
+                        <a href="https://twitter.com/@enikuomehin"> @Enikuommehin </a></p>
                         {{--<p align="justify">Click on the Summarize Button</p>--}}
 
                     </div>
