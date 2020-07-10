@@ -11,7 +11,7 @@
 {{(csrf_field())}}
 
 <fieldset>
-<legend style="color: green">Administrator (CRUD) dashboard </legend>
+<legend style="color: green">Administrator Dashboard (Create Project) </legend>
 <!-- displayig the error for the validated fields of the form defined in the controller-->
 @if(count($errors) > 0)
 @foreach($errors->all() as $error)
