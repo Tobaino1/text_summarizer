@@ -25,7 +25,9 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+   
+    protected $redirectTo = '/admin';
+    //  protected $redirectTo = '/home'; //forner reidrect after login to change to form that collects users that wants summarizes
 
     /**
      * Create a new controller instance.

@@ -16,7 +16,7 @@ class CreateController extends Controller
     {
         $this->middleware('auth');
     }
-   
+
     public function create ()
     {
         return view ('create');
