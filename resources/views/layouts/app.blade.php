@@ -16,7 +16,7 @@
     </head>
     <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <a class="navbar-brand" href="#">A Technique for Children news rendering by Text Summarization</a>
+  <a class="navbar-brand" href="#">HelpMe - Portal</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,13 +29,21 @@
       </li>
       <li>
 
+    <li class="nav-link">
+         <a class="nav-link" href="{{ route('help') }}" style="color: white">Help on a project / research</a> 
+      </li>
+
+  <li class="nav-link">
+         <a class="nav-link" href="{{ route('previous_proj') }}" style="color: white">Previous projects / researches</a> 
+      </li>
+
       <li class="nav-link">
-         <a class="nav-link" href="{{ route('login') }}" style="color: white">Login</a>
+         <a class="nav-link" href="{{ route('login') }}" style="color: white">Admin</a>
       </li>
       
-      <li class="nav-link">
+      <!-- <li class="nav-link">
          <a class="nav-link" href="{{ route('register') }}" style="color: white">Register</a> 
-      </li>
+      </li> -->
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
